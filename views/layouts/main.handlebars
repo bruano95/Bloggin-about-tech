@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheelin-n-Dealin</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+  <script src="https://js.upload.io/upload-js/v2"></script>
+</head>
+
+<body>
+  <header>
+    <img src="/images/Wheelin N Dealin Logo Concepts-08.png">
+    <h1>Wheelin-n-Dealin</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+    <a href="/about">About</a>
+    {{#if logged_in}}
+    <button id="logout" class="btn">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main class="row">
+    <div class="gallery col-md-25">
+      {{{body}}}
+    </div>
+  </main>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
